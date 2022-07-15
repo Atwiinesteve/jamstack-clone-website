@@ -1,0 +1,25 @@
+footer.footer--area {
+  background: lightblue;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(48, 48, 48);
+
+  @include mq(320px) {
+    flex-direction: column;
+    font-size: 0.7rem;
+  }
+
+  @include mq(400px) {
+    flex-direction: column;
+    font-size: 0.7rem;
+  }
+
+  @include mq(550px) {
+    flex-direction: row;
+    font-size: 1rem;
+  }
+
+}

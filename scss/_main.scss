@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+$border-color: #dddddd;
+$small-text-color: #70757a;
+$background-color: #fff;
+$text-color: #000;
+$font-stack: "Poppins", Arial, sans-serif;
+
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  font-family: $font-stack;
+  background: $background-color;
+  position: relative;
+  overflow-x: hidden;
+}
+
+%flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  @extend %flex;
+  flex-direction: column;
+}
+
+@mixin flexCenter {
+  @extend %flex;
+  justify-content: center;
+}
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+main {
+  margin: 24rem  24rem auto;
+  width: 60%;
+
+  @include mq(320px) {
+    margin: 9rem  5rem auto;
+    width: 100%;
+  }
+}
+
+.spacer {
+  margin: 5rem 0;
+
+  @include mq(320px) {
+    margin: 2rem 0;
+  }
+}
